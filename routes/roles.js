@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
         value: role._id,
         label:role.roleName,
      }))
-      res.json(mappedRoles);
+      res.json({data:mappedRoles});
     } catch (error) {
       console.error('Error fetching users:', error.message);
       res.status(500).json({ error: 'Internal Server Error' });

@@ -13,7 +13,7 @@ const generateUniqueReferralCode = () => {
     const {name,email,phone,instagram, referralCode, role} = req.body
     try{
       if(!name || !email || !phone || !instagram || !referralCode || !role) {
-        return res.status(401).json({message:"Eksik parametre"});
+        return res.status(401).json({message:"Missing Paramete"});
       }
       const referralCodeDocument = await ReferralCode.findOne({ code: referralCode });
       const roleDocument = await Role.findById(role);
