@@ -11,10 +11,10 @@
 services:
   mongo_db:
     container_name: db_container
-    image: mongo:6
+    image: mongo:4.4.6
     restart: unless-stopped
     volumes:
-      - mongo_data:/data/db
+      - ${PWD}/../data/mongo:/data/db:/data/db
     ports:
       - 27017:27017
 
