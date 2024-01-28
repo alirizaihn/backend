@@ -12,7 +12,7 @@ services:
   mongo_db:
     container_name: db_container
     image: mongo:6
-    restart: always
+    tty: true
     volumes:
       - mongo_data:/data/db
     ports:
