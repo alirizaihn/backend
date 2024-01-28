@@ -9,7 +9,6 @@ const generateUniqueReferralCode = () => {
 };
 
   const register = async (req, res, next) => {
-    console.log("bak",req.body);
     const {name,email,phone,instagram, referralCode, role} = req.body
     try{
       if(!name || !email || !phone || !instagram || !referralCode || !role) {
